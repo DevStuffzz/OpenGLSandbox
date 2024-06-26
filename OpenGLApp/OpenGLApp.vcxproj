@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_PLATFORM_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -96,7 +96,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_PLATFORM_WINDOWS;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -119,7 +119,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_PLATFORM_WINDOWS;_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vendor\glfw\include;..\vendor\glm;include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -138,7 +138,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\GLTemplate.h" />
     <ClInclude Include="include\glm\common.hpp" />
     <ClInclude Include="include\glm\detail\_features.hpp" />
     <ClInclude Include="include\glm\detail\_fixes.hpp" />
@@ -411,12 +410,30 @@
     <ClInclude Include="include\glm\vec3.hpp" />
     <ClInclude Include="include\glm\vec4.hpp" />
     <ClInclude Include="include\glm\vector_relational.hpp" />
-    <ClInclude Include="src\Window.h" />
+    <ClInclude Include="include\stb\stb_image.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Buffers\VertexArray.h" />
+    <ClInclude Include="src\engine\io\Callbacks.h" />
+    <ClInclude Include="src\engine\io\Camera.h" />
+    <ClInclude Include="src\engine\io\Input.h" />
+    <ClInclude Include="src\engine\io\Window.h" />
+    <ClInclude Include="src\engine\renderer\Mesh.h" />
+    <ClInclude Include="src\engine\renderer\Renderer.h" />
+    <ClInclude Include="src\engine\renderer\Shader.h" />
+    <ClInclude Include="src\engine\renderer\Texture.h" />
+    <ClInclude Include="src\Primitives.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Buffers\VertexArray.cpp" />
+    <ClCompile Include="src\engine\io\Camera.cpp" />
+    <ClCompile Include="src\engine\io\Input.cpp" />
+    <ClCompile Include="src\engine\renderer\stb_image.cpp" />
+    <ClCompile Include="src\engine\renderer\Texture.cpp" />
     <ClCompile Include="src\OpenGLApp.cpp" />
+    <ClCompile Include="src\engine\io\Window.cpp" />
+    <ClCompile Include="src\engine\renderer\Shader.cpp" />
     <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\GLFW\GLFW.vcxproj">

@@ -22,6 +22,18 @@
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Buffers">
+      <UniqueIdentifier>{A947D8FD-15FD-50F3-9EF1-4ACA0AA647F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine">
+      <UniqueIdentifier>{32B5D758-1E6D-19A6-8774-F201734BB496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\io">
+      <UniqueIdentifier>{D9D5D3A0-4596-4FD7-0ED1-98547A5094B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\renderer">
+      <UniqueIdentifier>{388D297C-A4EE-068A-2D5C-4D3C99BC3D49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glm\common.hpp">
@@ -840,22 +852,41 @@
     <ClInclude Include="include\glm\vector_relational.hpp">
       <Filter>include\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Window.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GLTemplate.h">
-      <Filter>src</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Primitives.h" />
+    <ClInclude Include="src\engine\renderer\Shader.h" />
+    <ClInclude Include="src\engine\renderer\Renderer.h" />
+    <ClInclude Include="src\engine\io\Window.h" />
+    <ClInclude Include="src\Buffers\VertexArray.h" />
+    <ClInclude Include="include\stb\stb_image.h" />
+    <ClInclude Include="src\engine\renderer\Texture.h" />
+    <ClInclude Include="src\engine\renderer\Mesh.h" />
+    <ClInclude Include="src\engine\io\Camera.h" />
+    <ClInclude Include="src\engine\io\Input.h" />
+    <ClInclude Include="src\engine\io\Callbacks.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Buffers\VertexArray.cpp">
+      <Filter>src\Buffers</Filter>
+    </ClCompile>
     <ClCompile Include="src\OpenGLApp.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\io\Window.cpp">
+      <Filter>src\engine\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\renderer\Shader.cpp">
+      <Filter>src\engine\renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Window.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+    <ClCompile Include="src\engine\renderer\Texture.cpp" />
+    <ClCompile Include="src\engine\renderer\stb_image.cpp" />
+    <ClCompile Include="src\engine\io\Camera.cpp" />
+    <ClCompile Include="src\engine\io\Input.cpp" />
   </ItemGroup>
 </Project>

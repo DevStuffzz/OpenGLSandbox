@@ -11,7 +11,8 @@ project "OpenGLApp"
    {
       "../vendor/glfw/include",
       "../vendor/glm/",
-      "include/"
+      "include/",
+      "src/"
    }
 
    
